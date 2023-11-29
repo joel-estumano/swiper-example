@@ -1,0 +1,13 @@
+<div class="container-fluid min-vh-100 d-flex" *ngIf="cards$ | async as cards">
+  <div class="container p-0 m-auto">
+    <div class="row">
+      <div class="col-12 px-0">
+        <swiper-container appSwiper #swiper [config]="swiperConfig" *ngIf="cards.length > 1">
+          <swiper-slide *ngFor="let card of cards">
+            <app-card [card]="card" />
+          </swiper-slide>
+        </swiper-container>
+      </div>
+    </div>
+  </div>
+</div>

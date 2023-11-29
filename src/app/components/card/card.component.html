@@ -1,0 +1,21 @@
+<div class="card rounded-0 rounded-top border-0 mx-3 my-5 bg-white text-dark shadow" *ngIf="card">
+    <img class="card-img-top" src="{{card.urlImage}}" alt="{{card.title}}">
+    <div class="card-body">
+        <h5 class="card-title mb-0">{{card.title}}</h5>
+        <p class="card-text text-secondary"><small class="fst-italic me-1">by</small>{{card.description}}</p>
+    </div>
+    <div class="card-footer bg-transparent border-0">
+        <div class="d-flex justify-content-between">
+            <span class="fw-semibold">${{card.price}}</span>
+            <nav class="d-flex gap-1">
+                <button class="btn btn-sm btn-outline-secondary rounded-0 px-3 py-2 text-capitalize">
+                    <i class="bi bi-cart-fill"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-primary rounded-0 px-3 py-2 text-capitalize"
+                    *ngIf="card.livePreview">
+                    live preview
+                </button>
+            </nav>
+        </div>
+    </div>
+</div>
