@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { SwiperContainer } from 'swiper/element';
 import { SwiperOptions } from 'swiper/types';
 import { CardType } from './types/card.type';
@@ -10,7 +10,7 @@ import { ApiService } from './services/api.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   readonly title = 'swiper-example';
 
   cards$!: Observable<CardType[]>;
@@ -21,14 +21,21 @@ export class AppComponent {
     this.cards$ = this.apiService.get().pipe();
   }
 
+  ngAfterViewInit(): void {
+    this.swiper.nativeElement.swiper.autoplay.start();
+  }
+
   readonly swiperConfig: SwiperOptions = {
     spaceBetween: 0,
-    slidesPerView: 4,
-    freeMode: {
+    /* freeMode: {
       enabled: true,
       sticky: true,
       momentumBounce: false,
       minimumVelocity: 0.5,
+    }, */
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
     },
     watchSlidesProgress: true,
     breakpoints: {
@@ -49,6 +56,4 @@ export class AppComponent {
       },
     },
   };
-
-
 }
