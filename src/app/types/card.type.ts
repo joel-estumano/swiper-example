@@ -2,6 +2,7 @@ export type CardType = {
     urlImage: string;
     title: string;
     description: string;
-    price: string;
-    livePreview: boolean
+    price: number;
+    livePreview: boolean;
+    bestPrice?: boolean
 };
