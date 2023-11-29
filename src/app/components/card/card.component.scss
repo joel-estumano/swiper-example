@@ -1,44 +1,54 @@
- .card .card-ribbon {
-     width: 150px;
-     height: 150px;
-     position: absolute;
-     top: -10px;
-     left: -10px;
-     overflow: hidden;
- }
+.card .card-title,
+.card .card-text {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    /* "overflow" value must be different from "visible" */
 
- .card .card-ribbon::before,
- .card .card-ribbon::after {
-     position: absolute;
-     content: "";
-     z-index: -1;
-     display: block;
-     border: 7px solid var(--bs-primary);
-     border-top-color: transparent;
-     border-left-color: transparent;
- }
+    text-overflow: ellipsis;
+}
 
- .card .card-ribbon::before {
-     top: 0px;
-     right: 15px;
- }
+.card .card-ribbon {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    overflow: hidden;
+}
 
- .card .card-ribbon::after {
-     bottom: 15px;
-     left: 0px;
- }
+.card .card-ribbon::before,
+.card .card-ribbon::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    display: block;
+    border: 7px solid var(--bs-primary);
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
 
- .card .card-ribbon span {
-     position: absolute;
-     top: 30px;
-     right: 0;
-     transform: rotate(-45deg);
-     width: 200px;
-     background: var(--bs-primary);
-     padding: 10px 0;
-     color: var(--bs-white);
-     text-align: center;
-     font-size: 17px;
-     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-     text-shadow: .1em .1em 0 rgba(var(--bs-dark-rgb), 0.32);
- }
+.card .card-ribbon::before {
+    top: 0px;
+    right: 15px;
+}
+
+.card .card-ribbon::after {
+    bottom: 15px;
+    left: 0px;
+}
+
+.card .card-ribbon span {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    transform: rotate(-45deg);
+    width: 200px;
+    background: rgba(var(--bs-primary-rgb), 0.9);
+    padding: 10px 0;
+    color: var(--bs-white);
+    text-align: center;
+    font-size: 17px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    text-shadow: 0.1em 0.1em 0 rgba(var(--bs-dark-rgb), 0.32);
+}

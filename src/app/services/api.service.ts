@@ -9,7 +9,7 @@ export class ApiService {
   private cards: CardType[] = [
     {
       title: 'Computer',
-      description: 'Lorem Ipsum is simply dummy.',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       urlImage: 'assets/img/card-1.png',
       price: 29,
       livePreview: true,
@@ -17,7 +17,7 @@ export class ApiService {
     },
     {
       title: 'Building',
-      description: 'Lorem Ipsum is simply dummy.',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       urlImage: 'assets/img/card-2.png',
       price: 22,
       livePreview: true,
@@ -25,28 +25,28 @@ export class ApiService {
     },
     {
       title: 'Balloon',
-      description: 'Lorem Ipsum is simply dummy.',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       urlImage: 'assets/img/card-3.png',
       price: 49,
       livePreview: true,
     },
     {
       title: 'Glass over a computer',
-      description: 'Lorem Ipsum is simply dummy.',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       urlImage: 'assets/img/card-4.png',
       price: 19,
       livePreview: false,
     },
     {
       title: 'Autumn',
-      description: 'Lorem Ipsum is simply dummy.',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       urlImage: 'assets/img/card-5.png',
       price: 33,
       livePreview: true,
     },
     {
       title: 'Balloon',
-      description: 'Lorem Ipsum is simply dummy.',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       urlImage: 'assets/img/card-6.png',
       price: 49,
       livePreview: true,
@@ -54,7 +54,7 @@ export class ApiService {
     },
     {
       title: 'Balloon',
-      description: 'Lorem Ipsum is simply dummy.',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       urlImage: 'assets/img/card-7.png',
       price: 49,
       livePreview: true,
@@ -62,7 +62,7 @@ export class ApiService {
     },
     {
       title: 'Balloon',
-      description: 'Lorem Ipsum is simply dummy.',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       urlImage: 'assets/img/card-8.png',
       price: 49,
       livePreview: true,
